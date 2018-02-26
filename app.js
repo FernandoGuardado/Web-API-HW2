@@ -76,7 +76,7 @@ app.delete('/deletes', auth.isAuthenticated, function (req, res) {
 //=================================================================================
 // deny anything other than get, post, put & delete
 app.use('*', function (req, res, next) {
-        res.status(405).send({message: "Invalid method or path."});
+        res.status(405).send({message: "Invalid path."});
         });
 //=================================================================================
 // process on local port
