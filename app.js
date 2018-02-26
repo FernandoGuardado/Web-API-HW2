@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 // authentication strategy
 app.use(passport.initialize());
 app.use(passport.session());
-var authController = require('./auth-handler');
+var auth = require('./authentication');
 //=================================================================================
 // verify headers and body for put, post, get, delete
 function response(method, req, res) {
@@ -69,7 +69,7 @@ app.put('/puts', function (req, res) {
         });
 //=================================================================================
 // path do deploy delete
-app.delete('/deletes', authController.isAuthenticated, function (req, res) {
+app.delete('/deletes', auth.isAuthenticated, function (req, res) {
            console.log(req.body);
            response('deletes', req, res);
            });
