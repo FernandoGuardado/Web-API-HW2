@@ -8,12 +8,12 @@
         "url": "https://github.com/FernandoGuardado/Web-API-HW2"
     },
     "dependencies": {
-        "express": "^4.16.2",
         "body-parser": "^1.18.2",
+        "dotenv": "^5.0.0",
+        "express": "^4.16.2",
         "jsonwebtoken": "^8.1.1",
         "passport": "^0.4.0",
         "passport-http": "^0.3.0",
-        "passport-jwt": "^3.0.1",
-        "dotenv": "^5.0.0"
+        "passport-jwt": "^3.0.1"
     }
 }
