@@ -82,6 +82,4 @@ app.use('*', function (req, res, next) {
 // process on local port
 var port = process.env.PORT || 8080;
 app.listen(port);
-// console message to know what port to look at
-console.log("Server on port: " + port);
 //=================================================================================
