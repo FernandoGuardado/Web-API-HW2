@@ -25,10 +25,10 @@ var auth = require('./authentication');
 function response(method, req, res) {
     // body & headers check
     if (Object.keys(req.headers).length === 0) {
-        res.status(400).send("The headers was empty");
+        res.status(400).send("The headers are empty. Fill and retry request.");
     }
     else if (Object.keys(req.body).length === 0) {
-        res.status(400).send("The body was empty")
+        res.status(400).send("The body is empty. Fill and retry request.")
     }
     else {
         res.status(200);
@@ -42,18 +42,12 @@ function response(method, req, res) {
 //============================================================================================================================
 // path do deploy get
 app.get('/gets', function (req, res) {
-        console.log(req.body);
-        if (Object.keys(req.headers).length === 0) {
-        res.status(400).send("The headers was empty");
-        }
-        else {
         res.status(200);
         res.json( {
                  message: 'Successful gets',
                  body: req.body,
                  headers: req.headers
                  })
-        }
         });
 //============================================================================================================================
 // path do deploy post
