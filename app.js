@@ -24,11 +24,11 @@ var auth = require('./authentication');
 // verify headers and body for put, post, get, delete
 function response(method, req, res) {
     // body & headers check
-    if (Object.keys(req.body).length === 0) {
-        res.status(400).send("The body was empty")
-    }
     if (Object.keys(req.headers).length === 0) {
         res.status(400).send("The headers was empty");
+    }
+    if (Object.keys(req.body).length === 0) {
+        res.status(400).send("The body was empty")
     }
     else {
         res.status(200);
