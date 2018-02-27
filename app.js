@@ -24,11 +24,11 @@ var auth = require('./authentication');
 // verify headers and body
 function response(method, req, res) {
     // body & headers check
-    if (Object.keys(req.headers).length === 0) {
-        res.status(400).send("The headers are empty. Fill and retry request.")
+    if (Object.keys(req.headers).length < 1) {
+        res.status(400).send("The headers are empty. Fill and retry request.");
     }
     else if (Object.keys(req.body).length === 0) {
-        res.status(400).send("The body is empty. Fill and retry request.")
+        res.status(400).send("The body is empty. Fill and retry request.");
     }
     else {
         res.status(200);
