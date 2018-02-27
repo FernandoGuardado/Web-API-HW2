@@ -27,7 +27,7 @@ function response(method, req, res) {
     if (Object.keys(req.headers).length === 0) {
         res.status(400).send("The headers was empty");
     }
-    if (Object.keys(req.body).length === 0) {
+    else if (Object.keys(req.body).length === 0) {
         res.status(400).send("The body was empty")
     }
     else {
